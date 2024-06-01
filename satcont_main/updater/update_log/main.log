@@ -1,0 +1,32 @@
+2024-05-28 14:44:44,635 - INFO - Replaced /home/sky/satcont_main/mcu/flasher.py with /home/sky/satcont_main/update/mcu/mcu.py
+2024-05-28 14:44:44,637 - INFO - Replaced /home/sky/satcont_main/config/settings.json with /home/sky/satcont_main/update/config/settings.json
+2024-05-28 14:44:44,840 - INFO - Executed command 'python3 /home/sky/satcont_main/updater/stop.py' as user 'sky'
+2024-05-28 14:44:47,257 - ERROR - Failed to execute command 'systemctl stop' as user 'root'
+2024-05-28 14:46:34,240 - INFO - Replaced /home/sky/satcont_main/mcu/flasher.py with /home/sky/satcont_main/update/mcu/mcu.py
+2024-05-28 14:46:34,242 - INFO - Replaced /home/sky/satcont_main/config/settings.json with /home/sky/satcont_main/update/config/settings.json
+2024-05-28 14:46:34,445 - INFO - Executed command 'python3 /home/sky/satcont_main/updater/stop.py' as user 'sky'
+2024-05-28 14:46:36,953 - ERROR - Failed to execute command 'systemctl stop' as user 'root'
+2024-05-28 14:50:07,701 - INFO - Replaced /home/sky/satcont_main/mcu/flasher.py with /home/sky/satcont_main/update/mcu/mcu.py
+2024-05-28 14:50:07,703 - INFO - Replaced /home/sky/satcont_main/config/settings.json with /home/sky/satcont_main/update/config/settings.json
+2024-05-28 14:50:08,827 - INFO - Executed command 'python3 /home/sky/satcont_main/updater/stop.py' as user 'sky'
+2024-05-28 14:50:55,851 - INFO - Replaced /home/sky/satcont_main/mcu/flasher.py with /home/sky/satcont_main/update/mcu/mcu.py
+2024-05-28 14:50:55,854 - INFO - Replaced /home/sky/satcont_main/config/settings.json with /home/sky/satcont_main/update/config/settings.json
+2024-05-28 14:50:56,980 - INFO - Executed command 'python3 /home/sky/satcont_main/updater/stop.py' as user 'sky'
+2024-05-28 14:51:30,403 - INFO - Replaced /home/sky/satcont_main/mcu/flasher.py with /home/sky/satcont_main/update/mcu/mcu.py
+2024-05-28 14:51:30,406 - INFO - Replaced /home/sky/satcont_main/config/settings.json with /home/sky/satcont_main/update/config/settings.json
+2024-05-28 14:51:54,144 - INFO - Replaced /home/sky/satcont_main/mcu/flasher.py with /home/sky/satcont_main/update/mcu/mcu.py
+2024-05-28 14:51:54,146 - INFO - Replaced /home/sky/satcont_main/config/settings.json with /home/sky/satcont_main/update/config/settings.json
+2024-05-28 14:51:54,148 - INFO - Removed file /home/sky/satcont_main/mcu/writer.h
+2024-05-28 14:52:22,426 - INFO - Replaced /home/sky/satcont_main/mcu/flasher.py with /home/sky/satcont_main/update/mcu/mcu.py
+2024-05-28 14:52:22,429 - INFO - Replaced /home/sky/satcont_main/config/settings.json with /home/sky/satcont_main/update/config/settings.json
+2024-05-28 14:52:53,347 - ERROR - Failed to execute command 'systemctl stop dfm' as user 'root'
+2024-05-28 14:53:54,065 - INFO - Replaced /home/sky/satcont_main/mcu/flasher.py with /home/sky/satcont_main/update/mcu/mcu.py
+2024-05-28 14:53:54,068 - INFO - Replaced /home/sky/satcont_main/config/settings.json with /home/sky/satcont_main/update/config/settings.json
+2024-05-28 14:54:13,142 - INFO - Replaced /home/sky/satcont_main/mcu/flasher.py with /home/sky/satcont_main/update/mcu/mcu.py
+2024-05-28 14:54:13,144 - INFO - Replaced /home/sky/satcont_main/config/settings.json with /home/sky/satcont_main/update/config/settings.json
+2024-05-28 14:54:34,379 - INFO - Replaced /home/sky/satcont_main/mcu/flasher.py with /home/sky/satcont_main/update/mcu/mcu.py
+2024-05-28 14:54:34,381 - INFO - Replaced /home/sky/satcont_main/config/settings.json with /home/sky/satcont_main/update/config/settings.json
+2024-05-28 14:55:05,194 - ERROR - Failed to execute command 'systemctl stop lightdm' as user 'root'
+2024-05-28 15:12:29,296 - INFO - Replaced /home/sky/satcont_main/mcu/flasher.py with /home/sky/satcont_main/update/mcu/mcu.py
+2024-05-28 15:12:29,298 - INFO - Replaced /home/sky/satcont_main/config/settings.json with /home/sky/satcont_main/update/config/settings.json
+2024-05-28 15:13:00,108 - ERROR - Failed to execute command 'systemctl stop lightdm' as user 'root'

@@ -1,0 +1,158 @@
+{
+    "name": "",
+    "type": "directory",
+    "children": [
+        {
+            "name": "camera",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "capture",
+                    "type": "directory",
+                    "children": [
+                        {
+                            "name": "pointillism.py",
+                            "type": "file",
+                            "size_kb": 1.958984375
+                        },
+                        {
+                            "name": "capture.py",
+                            "type": "file",
+                            "size_kb": 2.173828125
+                        },
+                        {
+                            "name": "test.py",
+                            "type": "file",
+                            "size_kb": 5.3486328125
+                        },
+                        {
+                            "name": "back2pic.py",
+                            "type": "file",
+                            "size_kb": 2.1552734375
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "transmitter",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "temp",
+                    "type": "directory",
+                    "children": [
+                        {
+                            "name": "logs",
+                            "type": "directory",
+                            "children": [
+                                {
+                                    "name": "log.txt",
+                                    "type": "file",
+                                    "size_kb": 19840.361328125
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "tree_builder.py",
+                    "type": "file",
+                    "size_kb": 2.916015625
+                }
+            ]
+        },
+        {
+            "name": "config",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "settings.json",
+                    "type": "file",
+                    "size_kb": 0.0
+                }
+            ]
+        },
+        {
+            "name": "mcu",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "flasher.py",
+                    "type": "file",
+                    "size_kb": 0.0
+                }
+            ]
+        },
+        {
+            "name": "updater",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "update_log",
+                    "type": "directory",
+                    "children": [
+                        {
+                            "name": "main.log",
+                            "type": "file",
+                            "size_kb": 3.869140625
+                        },
+                        {
+                            "name": "execute_sky.log",
+                            "type": "file",
+                            "size_kb": 0.15234375
+                        },
+                        {
+                            "name": "execute_root.log",
+                            "type": "file",
+                            "size_kb": 0.6103515625
+                        }
+                    ]
+                },
+                {
+                    "name": "updater.py",
+                    "type": "file",
+                    "size_kb": 3.751953125
+                },
+                {
+                    "name": "stop.py",
+                    "type": "file",
+                    "size_kb": 0.0
+                }
+            ]
+        },
+        {
+            "name": "update",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "config",
+                    "type": "directory",
+                    "children": [
+                        {
+                            "name": "settings.json",
+                            "type": "file",
+                            "size_kb": 0.0
+                        }
+                    ]
+                },
+                {
+                    "name": "update.json",
+                    "type": "file",
+                    "size_kb": 0.408203125
+                },
+                {
+                    "name": "mcu",
+                    "type": "directory",
+                    "children": [
+                        {
+                            "name": "mcu.py",
+                            "type": "file",
+                            "size_kb": 0.0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

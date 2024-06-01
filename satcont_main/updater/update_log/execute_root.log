@@ -1,0 +1,15 @@
+2024-05-28 14:44:47,255 - INFO - 
+2024-05-28 14:44:47,256 - INFO - [sudo] password for sky: Sorry, try again.
+[sudo] password for sky: 
+sudo: no password was provided
+sudo: 1 incorrect password attempt
+
+2024-05-28 14:46:36,949 - INFO - 
+2024-05-28 14:46:36,951 - INFO - [sudo] password for sky: Sorry, try again.
+[sudo] password for sky: 
+sudo: no password was provided
+sudo: 1 incorrect password attempt
+
+2024-05-28 14:52:53,345 - ERROR - Command execution failed with TIMEOUT.
+2024-05-28 14:55:05,191 - ERROR - Command execution failed with TIMEOUT.
+2024-05-28 15:13:00,107 - ERROR - Command execution failed with TIMEOUT.

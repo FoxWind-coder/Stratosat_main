@@ -1,0 +1,18 @@
+{
+  "update_dir": "/home/sky/satcont_main/update",
+  "replace": {
+    "mcu/mcu.py": "/home/sky/satcont_main/mcu/flasher.py",
+    "config/settings.json": "/home/sky/satcont_main/config/settings.json"
+  },
+  "remove": [
+    "/home/sky/satcont_main/mcu/writer.h",
+    "/home/sky/satcont_main/temp"
+  ],
+  "execute": {
+    "root": "systemctl stop lightdm"
+  },
+  "passwords": {
+    "sky": "1234",
+    "root": "1234"
+  }
+}
