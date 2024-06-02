@@ -2,6 +2,8 @@ import argparse
 import threading
 from uart_command import UARTCommand, log, verbose_logging, get_full_port_name
 import serial
+import os
+import json
 import subprocess
 
 
@@ -23,6 +25,28 @@ def execute_capture_command(arg1, arg2, arg3, arg4, arg5, arg6):
             log(f"[EXTERNAL] {result.stderr}", 'ERROR')
     except Exception as e:
         log(f"[EXTERNAL] Error executing capture command: {e}", 'ERROR')
+
+def pic2point(source, save):
+    command = ["python3", "/home/sky/satcont_main/camera/capture/pointillism.py", source, save]
+    log(f"Executing converting: {' '.join(command)}", 'INFO')
+    try:
+        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        if result.returncode == 0:
+            output_path = result.stdout.strip()
+            log(f"[EXTERNAL] {output_path}", 'INFO')
+            if os.path.exists(output_path):
+                data = {"converted_file": output_path}
+                json_file_path = "/home/sky/capture/pointed/ptconv.json"
+                os.makedirs(os.path.dirname(json_file_path), exist_ok=True)
+                with open(json_file_path, 'w') as json_file:
+                    json.dump(data, json_file, indent=4)
+                log(f"Path {output_path} written to {json_file_path}", 'INFO')
+            else:
+                log(f"not exist: {output_path}", 'WARNING')
+        else:
+            log(f"[EXTERNAL] {result.stderr}", 'ERROR')
+    except Exception as e:
+        log(f"[EXTERNAL] Error executing converting command: {e}", 'ERROR')
 
 
 
@@ -62,6 +86,7 @@ if __name__ == "__main__":
     uart.add_command(1, test1, release_port_during_execution=True)
     uart.add_command(2, test2, release_port_during_execution=False)
     uart.add_command(3, execute_capture_command, release_port_during_execution=False)
+    uart.add_command(4, pic2point, release_port_during_execution=False)
     
     # parallel uart listening
     listener_thread = threading.Thread(target=uart.listen)
@@ -69,4 +94,6 @@ if __name__ == "__main__":
     
     log("UART listener started.", 'INFO')
 
-# ++3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str++
+# python3 main.py --port 2 --baudrate 115200
+# ++3+/home/sky/capture:str+640:str+320:str+4:str+black:str+10:str++
+# ++4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str++

@@ -46,7 +46,7 @@ def main(input_image_path, output_folder_path):
                 line.append(str(gray_value))
             output_file.write(" ".join(line) + "\n")
 
-    print(f"File successfully saved to {output_file_path}")
+    print(f"{output_file_path}")
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
