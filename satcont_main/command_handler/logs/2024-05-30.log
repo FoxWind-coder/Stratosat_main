@@ -244,3 +244,387 @@
 [2024-05-30 17:45:35] [INFO] [EXTERNAL] Error: Unable to open camera.
 
 [2024-05-30 17:45:35] [INFO] Command executed successfully: 3
+[2024-05-30 20:03:08] [DEBUG] UART initialized with port: /dev/ttyS2 and baudrate: 115200
+[2024-05-30 20:03:08] [DEBUG] Added command number: 1 with function: test1 and release_port_during_execution: True
+[2024-05-30 20:03:08] [DEBUG] Added command number: 2 with function: test2 and release_port_during_execution: False
+[2024-05-30 20:03:08] [DEBUG] Added command number: 3 with function: execute_capture_command and release_port_during_execution: False
+[2024-05-30 20:03:08] [INFO] UART listener started.
+[2024-05-30 20:03:08] [INFO] Listening for incoming commands
+[2024-05-30 20:03:20] [WARNING] Command timeout occurred
+[2024-05-30 20:03:20] [DEBUG] Executing command: +3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:03:20] [DEBUG] Parsing command: +3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:03:20] [DEBUG] Received command from UART: +3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:03:20] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '480', '320', '4', 'black', '10']
+[2024-05-30 20:03:20] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 480 320 4 black 10
+[2024-05-30 20:03:27] [INFO] [EXTERNAL] Error: Unable to open camera.
+
+[2024-05-30 20:03:27] [INFO] Command executed successfully: 3
+[2024-05-30 20:03:52] [WARNING] Command timeout occurred
+[2024-05-30 20:03:52] [DEBUG] Executing command: +3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:03:52] [DEBUG] Parsing command: +3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:03:52] [DEBUG] Received command from UART: +3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:03:52] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '480', '320', '4', 'black', '10']
+[2024-05-30 20:03:52] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 480 320 4 black 10
+[2024-05-30 20:03:58] [INFO] [EXTERNAL] Error: Unable to open camera.
+
+[2024-05-30 20:03:58] [INFO] Command executed successfully: 3
+[2024-05-30 20:04:05] [DEBUG] Executing command: +
+[2024-05-30 20:04:05] [DEBUG] Parsing command: +
+[2024-05-30 20:04:05] [DEBUG] Received command from UART: +
+[2024-05-30 20:04:05] [ERROR] Error during command execution: invalid literal for int() with base 10: ''
+[2024-05-30 20:04:05] [ERROR] Sending error message: invalid literal for int() with base 10: ''
+[2024-05-30 20:04:05] [DEBUG] Executing command: 3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:04:05] [DEBUG] Parsing command: 3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:04:05] [DEBUG] Received command from UART: 3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:04:05] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '480', '320', '4', 'black', '10']
+[2024-05-30 20:04:05] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 480 320 4 black 10
+[2024-05-30 20:04:12] [INFO] [EXTERNAL] Error: Unable to open camera.
+
+[2024-05-30 20:04:12] [INFO] Command executed successfully: 3
+[2024-05-30 20:06:47] [WARNING] Command timeout occurred
+[2024-05-30 20:06:47] [DEBUG] Executing command: +3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:06:47] [DEBUG] Parsing command: +3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:06:47] [DEBUG] Received command from UART: +3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:06:47] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '480', '320', '4', 'black', '10']
+[2024-05-30 20:06:47] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 480 320 4 black 10
+[2024-05-30 20:06:54] [INFO] [EXTERNAL] /home/sky/capture/capture_11.jpg
+
+[2024-05-30 20:06:54] [INFO] Command executed successfully: 3
+[2024-05-30 20:07:06] [WARNING] Command timeout occurred
+[2024-05-30 20:07:06] [DEBUG] Executing command: +3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:07:06] [DEBUG] Parsing command: +3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:07:06] [DEBUG] Received command from UART: +3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:07:06] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '480', '320', '4', 'black', '10']
+[2024-05-30 20:07:06] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 480 320 4 black 10
+[2024-05-30 20:07:13] [INFO] [EXTERNAL] /home/sky/capture/capture_12.jpg
+
+[2024-05-30 20:07:13] [INFO] Command executed successfully: 3
+[2024-05-30 20:07:20] [DEBUG] Executing command: +
+[2024-05-30 20:07:20] [DEBUG] Parsing command: +
+[2024-05-30 20:07:20] [DEBUG] Received command from UART: +
+[2024-05-30 20:07:20] [ERROR] Error during command execution: invalid literal for int() with base 10: ''
+[2024-05-30 20:07:20] [ERROR] Sending error message: invalid literal for int() with base 10: ''
+[2024-05-30 20:07:20] [DEBUG] Executing command: 3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:07:20] [DEBUG] Parsing command: 3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:07:20] [DEBUG] Received command from UART: 3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:07:20] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '480', '320', '4', 'black', '10']
+[2024-05-30 20:07:20] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 480 320 4 black 10
+[2024-05-30 20:07:28] [INFO] [EXTERNAL] /home/sky/capture/capture_13.jpg
+
+[2024-05-30 20:07:28] [INFO] Command executed successfully: 3
+[2024-05-30 20:07:33] [DEBUG] Executing command: +
+[2024-05-30 20:07:33] [DEBUG] Parsing command: +
+[2024-05-30 20:07:33] [DEBUG] Received command from UART: +
+[2024-05-30 20:07:33] [ERROR] Error during command execution: invalid literal for int() with base 10: ''
+[2024-05-30 20:07:33] [ERROR] Sending error message: invalid literal for int() with base 10: ''
+[2024-05-30 20:07:33] [DEBUG] Executing command: 3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:07:33] [DEBUG] Parsing command: 3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:07:33] [DEBUG] Received command from UART: 3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:07:33] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '480', '320', '4', 'black', '10']
+[2024-05-30 20:07:33] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 480 320 4 black 10
+[2024-05-30 20:07:40] [INFO] [EXTERNAL] /home/sky/capture/capture_14.jpg
+
+[2024-05-30 20:07:40] [INFO] Command executed successfully: 3
+[2024-05-30 20:08:00] [WARNING] Command timeout occurred
+[2024-05-30 20:08:00] [DEBUG] Executing command: +3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:08:00] [DEBUG] Parsing command: +3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:08:00] [DEBUG] Received command from UART: +3+/home/sky/capture:str+480:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:08:00] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '480', '320', '4', 'black', '10']
+[2024-05-30 20:08:00] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 480 320 4 black 10
+[2024-05-30 20:08:08] [INFO] [EXTERNAL] /home/sky/capture/capture_15.jpg
+
+[2024-05-30 20:08:08] [INFO] Command executed successfully: 3
+[2024-05-30 20:09:07] [WARNING] Command timeout occurred
+[2024-05-30 20:09:07] [DEBUG] Executing command: +3+/home/sky/capture:str+1280:str+720:str+4:str+black:str+10:str+
+[2024-05-30 20:09:07] [DEBUG] Parsing command: +3+/home/sky/capture:str+1280:str+720:str+4:str+black:str+10:str+
+[2024-05-30 20:09:07] [DEBUG] Received command from UART: +3+/home/sky/capture:str+1280:str+720:str+4:str+black:str+10:str+
+[2024-05-30 20:09:07] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '1280', '720', '4', 'black', '10']
+[2024-05-30 20:09:07] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 1280 720 4 black 10
+[2024-05-30 20:09:15] [INFO] [EXTERNAL] /home/sky/capture/capture_3.jpg
+
+[2024-05-30 20:09:15] [INFO] Command executed successfully: 3
+[2024-05-30 20:09:34] [WARNING] Command timeout occurred
+[2024-05-30 20:09:34] [DEBUG] Executing command: +3+/home/sky/capture:str+480:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:09:34] [DEBUG] Parsing command: +3+/home/sky/capture:str+480:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:09:34] [DEBUG] Received command from UART: +3+/home/sky/capture:str+480:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:09:34] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '480', '480', '4', 'black', '10']
+[2024-05-30 20:09:34] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 480 480 4 black 10
+[2024-05-30 20:09:42] [INFO] [EXTERNAL] /home/sky/capture/capture_4.jpg
+
+[2024-05-30 20:09:42] [INFO] Command executed successfully: 3
+[2024-05-30 20:09:48] [DEBUG] Executing command: +
+[2024-05-30 20:09:48] [DEBUG] Parsing command: +
+[2024-05-30 20:09:48] [DEBUG] Received command from UART: +
+[2024-05-30 20:09:48] [ERROR] Error during command execution: invalid literal for int() with base 10: ''
+[2024-05-30 20:09:48] [ERROR] Sending error message: invalid literal for int() with base 10: ''
+[2024-05-30 20:09:48] [DEBUG] Executing command: 3+/home/sky/capture:str+480:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:09:48] [DEBUG] Parsing command: 3+/home/sky/capture:str+480:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:09:48] [DEBUG] Received command from UART: 3+/home/sky/capture:str+480:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:09:48] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '480', '480', '4', 'black', '10']
+[2024-05-30 20:09:48] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 480 480 4 black 10
+[2024-05-30 20:09:55] [INFO] [EXTERNAL] /home/sky/capture/capture_5.jpg
+
+[2024-05-30 20:09:55] [INFO] Command executed successfully: 3
+[2024-05-30 20:10:02] [DEBUG] Executing command: +
+[2024-05-30 20:10:02] [DEBUG] Parsing command: +
+[2024-05-30 20:10:02] [DEBUG] Received command from UART: +
+[2024-05-30 20:10:02] [ERROR] Error during command execution: invalid literal for int() with base 10: ''
+[2024-05-30 20:10:02] [ERROR] Sending error message: invalid literal for int() with base 10: ''
+[2024-05-30 20:10:02] [DEBUG] Executing command: 3+/home/sky/capture:str+480:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:10:02] [DEBUG] Parsing command: 3+/home/sky/capture:str+480:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:10:02] [DEBUG] Received command from UART: 3+/home/sky/capture:str+480:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:10:02] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '480', '480', '4', 'black', '10']
+[2024-05-30 20:10:02] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 480 480 4 black 10
+[2024-05-30 20:10:09] [INFO] [EXTERNAL] /home/sky/capture/capture_6.jpg
+
+[2024-05-30 20:10:09] [INFO] Command executed successfully: 3
+[2024-05-30 20:10:39] [WARNING] Command timeout occurred
+[2024-05-30 20:10:39] [DEBUG] Executing command: +3+/home/sky/capture:str+64:str+64:str+4:str+black:str+10:str+
+[2024-05-30 20:10:39] [DEBUG] Parsing command: +3+/home/sky/capture:str+64:str+64:str+4:str+black:str+10:str+
+[2024-05-30 20:10:39] [DEBUG] Received command from UART: +3+/home/sky/capture:str+64:str+64:str+4:str+black:str+10:str+
+[2024-05-30 20:10:39] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '64', '64', '4', 'black', '10']
+[2024-05-30 20:10:39] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 64 64 4 black 10
+[2024-05-30 20:10:47] [INFO] [EXTERNAL] /home/sky/capture/capture_7.jpg
+
+[2024-05-30 20:10:47] [INFO] Command executed successfully: 3
+[2024-05-30 20:12:12] [WARNING] Command timeout occurred
+[2024-05-30 20:12:12] [DEBUG] Executing command: +3+/home/sky/capture:str+320:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:12:12] [DEBUG] Parsing command: +3+/home/sky/capture:str+320:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:12:12] [DEBUG] Received command from UART: +3+/home/sky/capture:str+320:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:12:12] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '320', '480', '4', 'black', '10']
+[2024-05-30 20:12:12] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 320 480 4 black 10
+[2024-05-30 20:12:19] [INFO] [EXTERNAL] /home/sky/capture/capture_8.jpg
+
+[2024-05-30 20:12:19] [INFO] Command executed successfully: 3
+[2024-05-30 20:14:58] [WARNING] Command timeout occurred
+[2024-05-30 20:14:58] [DEBUG] Executing command: +3+/home/sky/capture:str+320:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:14:58] [DEBUG] Parsing command: +3+/home/sky/capture:str+320:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:14:58] [DEBUG] Received command from UART: +3+/home/sky/capture:str+320:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:14:58] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '320', '480', '4', 'black', '10']
+[2024-05-30 20:14:58] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 320 480 4 black 10
+[2024-05-30 20:15:05] [INFO] [EXTERNAL] /home/sky/capture/capture_9.jpg
+
+[2024-05-30 20:15:05] [INFO] Command executed successfully: 3
+[2024-05-30 20:17:27] [WARNING] Command timeout occurred
+[2024-05-30 20:17:27] [DEBUG] Executing command: +3+/home/sky/capture:str+320:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:17:27] [DEBUG] Parsing command: +3+/home/sky/capture:str+320:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:17:27] [DEBUG] Received command from UART: +3+/home/sky/capture:str+320:str+480:str+4:str+black:str+10:str+
+[2024-05-30 20:17:27] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '320', '480', '4', 'black', '10']
+[2024-05-30 20:17:27] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 320 480 4 black 10
+[2024-05-30 20:17:34] [INFO] [EXTERNAL] /home/sky/capture/capture_10.jpg
+
+[2024-05-30 20:17:34] [INFO] Command executed successfully: 3
+[2024-05-30 20:18:07] [WARNING] Command timeout occurred
+[2024-05-30 20:18:07] [DEBUG] Executing command: +3+/home/sky/capture:str+1920:str+1080:str+4:str+black:str+128:str+
+[2024-05-30 20:18:07] [DEBUG] Parsing command: +3+/home/sky/capture:str+1920:str+1080:str+4:str+black:str+128:str+
+[2024-05-30 20:18:07] [DEBUG] Received command from UART: +3+/home/sky/capture:str+1920:str+1080:str+4:str+black:str+128:str+
+[2024-05-30 20:18:07] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '1920', '1080', '4', 'black', '128']
+[2024-05-30 20:18:07] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 1920 1080 4 black 128
+[2024-05-30 20:18:15] [INFO] [EXTERNAL] /home/sky/capture/capture_11.jpg
+
+[2024-05-30 20:18:15] [INFO] Command executed successfully: 3
+[2024-05-30 20:18:40] [WARNING] Command timeout occurred
+[2024-05-30 20:18:40] [DEBUG] Executing command: +3+/home/sky/capture:str+64:str+64:str+4:str+black:str+6:str+
+[2024-05-30 20:18:40] [DEBUG] Parsing command: +3+/home/sky/capture:str+64:str+64:str+4:str+black:str+6:str+
+[2024-05-30 20:18:40] [DEBUG] Received command from UART: +3+/home/sky/capture:str+64:str+64:str+4:str+black:str+6:str+
+[2024-05-30 20:18:40] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '64', '64', '4', 'black', '6']
+[2024-05-30 20:18:40] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 64 64 4 black 6
+[2024-05-30 20:18:47] [INFO] [EXTERNAL] /home/sky/capture/capture_12.jpg
+
+[2024-05-30 20:18:47] [INFO] Command executed successfully: 3
+[2024-05-30 20:19:30] [WARNING] Command timeout occurred
+[2024-05-30 20:19:30] [DEBUG] Executing command: +3+/home/sky/capture:str+64:str+64:str+4:str+black:str+4:str+
+[2024-05-30 20:19:30] [DEBUG] Parsing command: +3+/home/sky/capture:str+64:str+64:str+4:str+black:str+4:str+
+[2024-05-30 20:19:30] [DEBUG] Received command from UART: +3+/home/sky/capture:str+64:str+64:str+4:str+black:str+4:str+
+[2024-05-30 20:19:30] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '64', '64', '4', 'black', '4']
+[2024-05-30 20:19:30] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 64 64 4 black 4
+[2024-05-30 20:19:37] [INFO] [EXTERNAL] /home/sky/capture/capture_13.jpg
+
+[2024-05-30 20:19:37] [INFO] Command executed successfully: 3
+[2024-05-30 20:19:37] [DEBUG] Executing command: +
+[2024-05-30 20:19:37] [DEBUG] Parsing command: +
+[2024-05-30 20:19:37] [DEBUG] Received command from UART: +
+[2024-05-30 20:19:37] [ERROR] Error during command execution: invalid literal for int() with base 10: ''
+[2024-05-30 20:19:37] [ERROR] Sending error message: invalid literal for int() with base 10: ''
+[2024-05-30 20:19:37] [DEBUG] Executing command: 3+/home/sky/capture:str+64:str+64:str+4:str+black:str+4:str+
+[2024-05-30 20:19:37] [DEBUG] Parsing command: 3+/home/sky/capture:str+64:str+64:str+4:str+black:str+4:str+
+[2024-05-30 20:19:37] [DEBUG] Received command from UART: 3+/home/sky/capture:str+64:str+64:str+4:str+black:str+4:str+
+[2024-05-30 20:19:37] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '64', '64', '4', 'black', '4']
+[2024-05-30 20:19:37] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 64 64 4 black 4
+[2024-05-30 20:19:44] [INFO] [EXTERNAL] /home/sky/capture/capture_14.jpg
+
+[2024-05-30 20:19:44] [INFO] Command executed successfully: 3
+[2024-05-30 20:20:00] [WARNING] Command timeout occurred
+[2024-05-30 20:20:00] [DEBUG] Executing command: +3+/home/sky/capture:str+64:str+64:str+4:str+black:str+4:str+
+[2024-05-30 20:20:00] [DEBUG] Parsing command: +3+/home/sky/capture:str+64:str+64:str+4:str+black:str+4:str+
+[2024-05-30 20:20:00] [DEBUG] Received command from UART: +3+/home/sky/capture:str+64:str+64:str+4:str+black:str+4:str+
+[2024-05-30 20:20:00] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '64', '64', '4', 'black', '4']
+[2024-05-30 20:20:00] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 64 64 4 black 4
+[2024-05-30 20:20:07] [INFO] [EXTERNAL] /home/sky/capture/capture_15.jpg
+
+[2024-05-30 20:20:07] [INFO] Command executed successfully: 3
+[2024-05-30 20:20:09] [DEBUG] Executing command: +
+[2024-05-30 20:20:09] [DEBUG] Parsing command: +
+[2024-05-30 20:20:09] [DEBUG] Received command from UART: +
+[2024-05-30 20:20:09] [ERROR] Error during command execution: invalid literal for int() with base 10: ''
+[2024-05-30 20:20:09] [ERROR] Sending error message: invalid literal for int() with base 10: ''
+[2024-05-30 20:20:09] [DEBUG] Executing command: 3+/home/sky/capture:str+640:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:20:09] [DEBUG] Parsing command: 3+/home/sky/capture:str+640:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:20:09] [DEBUG] Received command from UART: 3+/home/sky/capture:str+640:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:20:09] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '640', '320', '4', 'black', '10']
+[2024-05-30 20:20:09] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 640 320 4 black 10
+[2024-05-30 20:20:16] [INFO] [EXTERNAL] /home/sky/capture/capture_16.jpg
+
+[2024-05-30 20:20:16] [INFO] Command executed successfully: 3
+[2024-05-30 20:26:41] [WARNING] Command timeout occurred
+[2024-05-30 20:26:41] [DEBUG] Executing command: +3+/home/sky/capture:str+640:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:26:41] [DEBUG] Parsing command: +3+/home/sky/capture:str+640:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:26:41] [DEBUG] Received command from UART: +3+/home/sky/capture:str+640:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:26:41] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '640', '320', '4', 'black', '10']
+[2024-05-30 20:26:41] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 640 320 4 black 10
+[2024-05-30 20:26:48] [INFO] [EXTERNAL] /home/sky/capture/capture_3.jpg
+
+[2024-05-30 20:26:48] [INFO] Command executed successfully: 3
+[2024-05-30 20:27:40] [DEBUG] UART initialized with port: /dev/ttyS2 and baudrate: 115200
+[2024-05-30 20:27:40] [DEBUG] Added command number: 1 with function: test1 and release_port_during_execution: True
+[2024-05-30 20:27:40] [DEBUG] Added command number: 2 with function: test2 and release_port_during_execution: False
+[2024-05-30 20:27:40] [DEBUG] Added command number: 3 with function: execute_capture_command and release_port_during_execution: False
+[2024-05-30 20:27:40] [DEBUG] Added command number: 4 with function: pic2point and release_port_during_execution: False
+[2024-05-30 20:27:40] [INFO] Listening for incoming commands
+[2024-05-30 20:27:40] [INFO] UART listener started.
+[2024-05-30 20:27:42] [DEBUG] Executing command: +
+[2024-05-30 20:27:42] [DEBUG] Parsing command: +
+[2024-05-30 20:27:42] [DEBUG] Received command from UART: +
+[2024-05-30 20:27:42] [ERROR] Error during command execution: invalid literal for int() with base 10: ''
+[2024-05-30 20:27:42] [ERROR] Sending error message: invalid literal for int() with base 10: ''
+[2024-05-30 20:27:42] [DEBUG] Executing command: 4+/home/sky/capture/capture3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:27:42] [DEBUG] Parsing command: 4+/home/sky/capture/capture3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:27:42] [DEBUG] Received command from UART: 4+/home/sky/capture/capture3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:27:42] [DEBUG] Parsed command number: 4 with arguments: ['/home/sky/capture/capture3.jpg', '/home/sky/capture/pointed']
+[2024-05-30 20:27:42] [INFO] Executing converting: python3 /home/sky/satcont_main/camera/capture/pointillism.py /home/sky/capture/capture3.jpg /home/sky/capture/pointed
+[2024-05-30 20:27:43] [INFO] [EXTERNAL] File /home/sky/capture/capture3.jpg does not exist.
+
+[2024-05-30 20:27:43] [INFO] Command executed successfully: 4
+[2024-05-30 20:28:00] [WARNING] Command timeout occurred
+[2024-05-30 20:28:00] [DEBUG] Executing command: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:28:00] [DEBUG] Parsing command: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:28:00] [DEBUG] Received command from UART: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:28:00] [DEBUG] Parsed command number: 4 with arguments: ['/home/sky/capture/capture_3.jpg', '/home/sky/capture/pointed']
+[2024-05-30 20:28:00] [INFO] Executing converting: python3 /home/sky/satcont_main/camera/capture/pointillism.py /home/sky/capture/capture_3.jpg /home/sky/capture/pointed
+[2024-05-30 20:28:02] [INFO] [EXTERNAL] File successfully saved to /home/sky/capture/pointed/splash_3.pix
+
+[2024-05-30 20:28:02] [INFO] Command executed successfully: 4
+[2024-05-30 20:29:40] [WARNING] Command timeout occurred
+[2024-05-30 20:29:40] [DEBUG] Executing command: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:29:40] [DEBUG] Parsing command: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:29:40] [DEBUG] Received command from UART: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:29:40] [DEBUG] Parsed command number: 4 with arguments: ['/home/sky/capture/capture_3.jpg', '/home/sky/capture/pointed']
+[2024-05-30 20:29:40] [INFO] Executing converting: python3 /home/sky/satcont_main/camera/capture/pointillism.py /home/sky/capture/capture_3.jpg /home/sky/capture/pointed
+[2024-05-30 20:29:42] [INFO] [EXTERNAL] File successfully saved to /home/sky/capture/pointed/splash_4.pix
+
+[2024-05-30 20:29:42] [INFO] Command executed successfully: 4
+[2024-05-30 20:30:12] [WARNING] Command timeout occurred
+[2024-05-30 20:30:12] [DEBUG] Executing command: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:30:12] [DEBUG] Parsing command: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:30:12] [DEBUG] Received command from UART: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:30:12] [DEBUG] Parsed command number: 4 with arguments: ['/home/sky/capture/capture_3.jpg', '/home/sky/capture/pointed']
+[2024-05-30 20:30:12] [INFO] Executing converting: python3 /home/sky/satcont_main/camera/capture/pointillism.py /home/sky/capture/capture_3.jpg /home/sky/capture/pointed
+[2024-05-30 20:30:15] [INFO] [EXTERNAL] /home/sky/capture/pointed/splash_5.pix
+
+[2024-05-30 20:30:15] [INFO] Command executed successfully: 4
+[2024-05-30 20:36:40] [DEBUG] UART initialized with port: /dev/ttyS2 and baudrate: 115200
+[2024-05-30 20:36:40] [DEBUG] Added command number: 1 with function: test1 and release_port_during_execution: True
+[2024-05-30 20:36:40] [DEBUG] Added command number: 2 with function: test2 and release_port_during_execution: False
+[2024-05-30 20:36:40] [DEBUG] Added command number: 3 with function: execute_capture_command and release_port_during_execution: False
+[2024-05-30 20:36:40] [DEBUG] Added command number: 4 with function: pic2point and release_port_during_execution: False
+[2024-05-30 20:36:40] [INFO] Listening for incoming commands
+[2024-05-30 20:36:40] [INFO] UART listener started.
+[2024-05-30 20:36:48] [DEBUG] Executing command: +
+[2024-05-30 20:36:48] [DEBUG] Parsing command: +
+[2024-05-30 20:36:48] [DEBUG] Received command from UART: +
+[2024-05-30 20:36:48] [ERROR] Error during command execution: invalid literal for int() with base 10: ''
+[2024-05-30 20:36:48] [ERROR] Sending error message: invalid literal for int() with base 10: ''
+[2024-05-30 20:36:48] [DEBUG] Executing command: 4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:36:48] [DEBUG] Parsing command: 4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:36:48] [DEBUG] Received command from UART: 4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:36:48] [DEBUG] Parsed command number: 4 with arguments: ['/home/sky/capture/capture_3.jpg', '/home/sky/capture/pointed']
+[2024-05-30 20:36:48] [INFO] Executing converting: python3 /home/sky/satcont_main/camera/capture/pointillism.py /home/sky/capture/capture_3.jpg /home/sky/capture/pointed
+[2024-05-30 20:36:51] [INFO] [EXTERNAL] /home/sky/capture/pointed/splash_6.pix
+[2024-05-30 20:36:51] [ERROR] [EXTERNAL] Error executing converting command: name 'os' is not defined
+[2024-05-30 20:36:51] [INFO] Command executed successfully: 4
+[2024-05-30 20:37:48] [DEBUG] UART initialized with port: /dev/ttyS2 and baudrate: 115200
+[2024-05-30 20:37:48] [DEBUG] Added command number: 1 with function: test1 and release_port_during_execution: True
+[2024-05-30 20:37:48] [DEBUG] Added command number: 2 with function: test2 and release_port_during_execution: False
+[2024-05-30 20:37:48] [DEBUG] Added command number: 3 with function: execute_capture_command and release_port_during_execution: False
+[2024-05-30 20:37:48] [DEBUG] Added command number: 4 with function: pic2point and release_port_during_execution: False
+[2024-05-30 20:37:48] [INFO] Listening for incoming commands
+[2024-05-30 20:37:48] [INFO] UART listener started.
+[2024-05-30 20:37:59] [WARNING] Command timeout occurred
+[2024-05-30 20:37:59] [DEBUG] Executing command: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:37:59] [DEBUG] Parsing command: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:37:59] [DEBUG] Received command from UART: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:37:59] [DEBUG] Parsed command number: 4 with arguments: ['/home/sky/capture/capture_3.jpg', '/home/sky/capture/pointed']
+[2024-05-30 20:37:59] [INFO] Executing converting: python3 /home/sky/satcont_main/camera/capture/pointillism.py /home/sky/capture/capture_3.jpg /home/sky/capture/pointed
+[2024-05-30 20:38:01] [INFO] [EXTERNAL] /home/sky/capture/pointed/splash_7.pix
+[2024-05-30 20:38:01] [INFO] Path /home/sky/capture/pointed/splash_7.pix written to /home/sky/captured/pointed/ptconv.json
+[2024-05-30 20:38:01] [INFO] Command executed successfully: 4
+[2024-05-30 20:38:35] [WARNING] Command timeout occurred
+[2024-05-30 20:38:35] [DEBUG] Executing command: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:38:35] [DEBUG] Parsing command: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:38:35] [DEBUG] Received command from UART: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:38:35] [DEBUG] Parsed command number: 4 with arguments: ['/home/sky/capture/capture_3.jpg', '/home/sky/capture/pointed']
+[2024-05-30 20:38:35] [INFO] Executing converting: python3 /home/sky/satcont_main/camera/capture/pointillism.py /home/sky/capture/capture_3.jpg /home/sky/capture/pointed
+[2024-05-30 20:38:38] [INFO] [EXTERNAL] /home/sky/capture/pointed/splash_8.pix
+[2024-05-30 20:38:38] [INFO] Path /home/sky/capture/pointed/splash_8.pix written to /home/sky/captured/pointed/ptconv.json
+[2024-05-30 20:38:38] [INFO] Command executed successfully: 4
+[2024-05-30 20:39:14] [WARNING] Command timeout occurred
+[2024-05-30 20:39:14] [DEBUG] Executing command: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:39:14] [DEBUG] Parsing command: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:39:14] [DEBUG] Received command from UART: +4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:39:14] [DEBUG] Parsed command number: 4 with arguments: ['/home/sky/capture/capture_3.jpg', '/home/sky/capture/pointed']
+[2024-05-30 20:39:14] [INFO] Executing converting: python3 /home/sky/satcont_main/camera/capture/pointillism.py /home/sky/capture/capture_3.jpg /home/sky/capture/pointed
+[2024-05-30 20:39:16] [INFO] [EXTERNAL] /home/sky/capture/pointed/splash_9.pix
+[2024-05-30 20:39:16] [INFO] Path /home/sky/capture/pointed/splash_9.pix written to /home/sky/captured/pointed/ptconv.json
+[2024-05-30 20:39:16] [INFO] Command executed successfully: 4
+[2024-05-30 20:39:59] [DEBUG] UART initialized with port: /dev/ttyS2 and baudrate: 115200
+[2024-05-30 20:39:59] [DEBUG] Added command number: 1 with function: test1 and release_port_during_execution: True
+[2024-05-30 20:39:59] [DEBUG] Added command number: 2 with function: test2 and release_port_during_execution: False
+[2024-05-30 20:39:59] [DEBUG] Added command number: 3 with function: execute_capture_command and release_port_during_execution: False
+[2024-05-30 20:39:59] [DEBUG] Added command number: 4 with function: pic2point and release_port_during_execution: False
+[2024-05-30 20:39:59] [INFO] Listening for incoming commands
+[2024-05-30 20:39:59] [INFO] UART listener started.
+[2024-05-30 20:40:00] [DEBUG] Executing command: +
+[2024-05-30 20:40:00] [DEBUG] Parsing command: +
+[2024-05-30 20:40:00] [DEBUG] Received command from UART: +
+[2024-05-30 20:40:00] [ERROR] Error during command execution: invalid literal for int() with base 10: ''
+[2024-05-30 20:40:00] [ERROR] Sending error message: invalid literal for int() with base 10: ''
+[2024-05-30 20:40:00] [DEBUG] Executing command: 4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:40:00] [DEBUG] Parsing command: 4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:40:00] [DEBUG] Received command from UART: 4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:40:00] [DEBUG] Parsed command number: 4 with arguments: ['/home/sky/capture/capture_3.jpg', '/home/sky/capture/pointed']
+[2024-05-30 20:40:00] [INFO] Executing converting: python3 /home/sky/satcont_main/camera/capture/pointillism.py /home/sky/capture/capture_3.jpg /home/sky/capture/pointed
+[2024-05-30 20:40:03] [INFO] [EXTERNAL] /home/sky/capture/pointed/splash_10.pix
+[2024-05-30 20:40:03] [INFO] Path /home/sky/capture/pointed/splash_10.pix written to /home/sky/capture/pointed/ptconv.json
+[2024-05-30 20:40:03] [INFO] Command executed successfully: 4
+[2024-05-30 20:41:49] [WARNING] Command timeout occurred
+[2024-05-30 20:41:49] [DEBUG] Executing command: +3+/home/sky/capture:str+640:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:41:49] [DEBUG] Parsing command: +3+/home/sky/capture:str+640:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:41:49] [DEBUG] Received command from UART: +3+/home/sky/capture:str+640:str+320:str+4:str+black:str+10:str+
+[2024-05-30 20:41:49] [DEBUG] Parsed command number: 3 with arguments: ['/home/sky/capture', '640', '320', '4', 'black', '10']
+[2024-05-30 20:41:49] [INFO] Executing capture command: python3 /home/sky/satcont_main/camera/capture/capture.py /home/sky/capture 640 320 4 black 10
+[2024-05-30 20:41:56] [INFO] [EXTERNAL] /home/sky/capture/capture_4.jpg
+
+[2024-05-30 20:41:56] [INFO] Command executed successfully: 3
+[2024-05-30 20:42:01] [DEBUG] Executing command: +
+[2024-05-30 20:42:01] [DEBUG] Parsing command: +
+[2024-05-30 20:42:01] [DEBUG] Received command from UART: +
+[2024-05-30 20:42:01] [ERROR] Error during command execution: invalid literal for int() with base 10: ''
+[2024-05-30 20:42:01] [ERROR] Sending error message: invalid literal for int() with base 10: ''
+[2024-05-30 20:42:07] [DEBUG] Executing command: 4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:42:07] [DEBUG] Parsing command: 4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:42:07] [DEBUG] Received command from UART: 4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str+
+[2024-05-30 20:42:07] [DEBUG] Parsed command number: 4 with arguments: ['/home/sky/capture/capture_3.jpg', '/home/sky/capture/pointed']
+[2024-05-30 20:42:07] [INFO] Executing converting: python3 /home/sky/satcont_main/camera/capture/pointillism.py /home/sky/capture/capture_3.jpg /home/sky/capture/pointed
+[2024-05-30 20:42:10] [INFO] [EXTERNAL] /home/sky/capture/pointed/splash_11.pix
+[2024-05-30 20:42:10] [INFO] Path /home/sky/capture/pointed/splash_11.pix written to /home/sky/capture/pointed/ptconv.json
+[2024-05-30 20:42:10] [INFO] Command executed successfully: 4
