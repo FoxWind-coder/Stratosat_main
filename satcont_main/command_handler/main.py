@@ -9,10 +9,11 @@ import hashlib
 
 def test1(arg1, arg2, arg3):
     log(f"parsed arguments: {arg1} {arg2} {arg3}", 'INFO')
-    print("hello")
+    return "hello"
 
 def test2(device_name):
     log(f"parsed: {device_name}", 'INFO')
+    return f"device_name: {device_name}"
 
 def execute_capture_command(arg1, arg2, arg3, arg4, arg5, arg6):
     command = ["python3", "/home/sky/satcont_main/camera/capture/capture.py", arg1, arg2, arg3, arg4, arg5, arg6]
@@ -21,10 +22,13 @@ def execute_capture_command(arg1, arg2, arg3, arg4, arg5, arg6):
         result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         if result.returncode == 0:
             log(f"[EXTERNAL] {result.stdout}", 'INFO')
+            return result.stdout.strip()
         else:
             log(f"[EXTERNAL] {result.stderr}", 'ERROR')
+            return result.stderr.strip()
     except Exception as e:
         log(f"[EXTERNAL] Error executing capture command: {e}", 'ERROR')
+        return str(e)
 
 def pic2point(source, save):
     command = ["python3", "/home/sky/satcont_main/camera/capture/pointillism.py", source, save]
@@ -41,76 +45,82 @@ def pic2point(source, save):
                 with open(json_file_path, 'w') as json_file:
                     json.dump(data, json_file, indent=4)
                 log(f"Path {output_path} written to {json_file_path}", 'INFO')
+                return json_file_path
             else:
                 log(f"not exist: {output_path}", 'WARNING')
+                return "Output path does not exist"
         else:
             log(f"[EXTERNAL] {result.stderr}", 'ERROR')
+            return result.stderr.strip()
     except Exception as e:
         log(f"[EXTERNAL] Error executing converting command: {e}", 'ERROR')
-
+        return str(e)
+# ++5+/home/sky/aaaaaaaaaaaa/file.txt:str+Some data:str+a:str+nstring:str+False:bool+5b8:str+0:int++
 def manage_file(path, data, mode, operation, overwrite, hash_check, line_number=None):
-    log(data, 'DEBUG')
+    log(f"Managing file: {path}", 'INFO')
     # Создание пути к файлу, если он не существует
     if not os.path.exists(os.path.dirname(path)):
         os.makedirs(os.path.dirname(path))
+        log(f"Created directory for path: {path}", 'INFO')
     
     # Проверка существования файла
-    if not os.path.isfile(path):
+    if not os.path.exists(path):
         with open(path, 'w') as f:
             pass
+        log(f"Created empty file: {path}", 'INFO')
 
     # Проверка хеша строки
     data_hash = hashlib.md5(data.encode()).hexdigest()[:3]
     if data_hash != hash_check:
-        log("Hash mismatch: expected {}, got {}".format(hash_check, data_hash), 'WARNING')
-        return "Warning: Hash mismatch"
+        log(f"Hash mismatch for data: {data}", 'WARNING')
+        return "Hash mismatch warning"
 
     # Чтение текущего содержимого файла
-    with open(path, 'r') as file:
-        lines = file.readlines()
+    with open(path, 'r') as f:
+        lines = f.readlines()
+    
+    log(f"Read {len(lines)} lines from file: {path}", 'INFO')
 
     # Выполнение операций над содержимым файла
     if operation == 'nstring':
         if overwrite:
-            with open(path, 'w') as file:
-                file.write(data + '\n')
+            mode = 'w'
         else:
-            with open(path, 'a') as file:
-                file.write(data + '\n')
+            mode = 'a'
+        with open(path, mode) as f:
+            f.write(data + '\n')
+        log(f"Added new string to file: {path}", 'INFO')
+
     elif operation == 'sstring':
-        if line_number is not None:
-            line_number = int(line_number) - 1
-            if line_number < len(lines):
-                lines[line_number] = lines[line_number].strip() + data + '\n'
-            else:
-                lines.append(data + '\n')
+        if line_number is not None and line_number <= len(lines):
+            lines[line_number - 1] = lines[line_number - 1].rstrip('\n') + data + '\n'
         else:
             lines.append(data + '\n')
-        
-        with open(path, 'w') as file:
-            file.writelines(lines)
-    elif operation == 'rstring':
-        if line_number is not None:
-            line_number = int(line_number) - 1
-            if line_number < len(lines):
-                lines[line_number] = data + '\n'
-            else:
-                lines.append(data + '\n')
-        
-        with open(path, 'w') as file:
-            file.writelines(lines)
-    
-    log_message = f"Data written to {path} with operation {operation}"
-    if verbose_logging:
-        log(log_message, 'DEBUG')
-    else:
-        log(log_message, 'INFO')
-    return "Data written successfully"
+        with open(path, 'w') as f:
+            f.writelines(lines)
+        log(f"Appended data to line {line_number} in file: {path}", 'INFO')
 
-def file_command(path, data, operation, overwrite, hash_check, line_number=None):
-    result = manage_file(path, data, operation, overwrite, hash_check, line_number)
-    log(result, 'INFO')
-    return result
+    elif operation == 'rstring':
+        if line_number is not None and line_number <= len(lines):
+            lines[line_number - 1] = data + '\n'
+        else:
+            lines.append(data + '\n')
+        with open(path, 'w') as f:
+            f.writelines(lines)
+        log(f"Replaced data in line {line_number} in file: {path}", 'INFO')
+    
+    else:
+        log(f"Unsupported operation: {operation}", 'ERROR')
+        return "Unsupported operation"
+
+    log(f"Operation {operation} performed on file {path}", 'INFO')
+    return "success"
+
+
+
+
+
+
 
 if __name__ == "__main__":
     # arg parser
@@ -135,30 +145,23 @@ if __name__ == "__main__":
     # port setup (number and baudrate)
     uart = UARTCommand(port=args.port, baudrate=args.baudrate)
     
-# Commands: command number
-# add_command takes the command number (used to check for arguments), 
-# the name of the executable function, and the need to release the port for function execution.
-# The command is called using the following format:
-# ++command_number+arg1:type+arg2:type+arg3:type
-# Example:
-# ++1+FoxWind:str+1234:int+example:str++
-# You can change the verbose logging value to True inside uart_command.py if you need to debug the code.
-# Note: that the error log processing and output for parsing and command processing are provided, although they are not perfect.
+    # Commands: command number
+    # add_command takes the command number (used to check for arguments), 
+    # the name of the executable function, and the need to release the port for function execution.
+    # The command is called using the following format:
+    # ++command_number+arg1:type+arg2:type+arg3:type
+    # Example:
+    # ++1+FoxWind:str+1234:int+example:str++
+    # You can change the verbose logging value to True inside uart_command.py if you need to debug the code.
+    # Note: that the error log processing and output for parsing and command processing are provided, although they are not perfect.
 
     uart.add_command(1, test1, release_port_during_execution=True)
     uart.add_command(2, test2, release_port_during_execution=False)
     uart.add_command(3, execute_capture_command, release_port_during_execution=False)
     uart.add_command(4, pic2point, release_port_during_execution=False)
-    uart.add_command(5, file_command, release_port_during_execution=False)
-
+    uart.add_command(5, manage_file, release_port_during_execution=False)
     # parallel uart listening
     listener_thread = threading.Thread(target=uart.listen)
     listener_thread.start()
     
     log("UART listener started.", 'INFO')
-
-# Example usage:
-# python3 main.py --port 2 --baudrate 115200
-# ++3+/home/sky/capture:str+640:str+320:str+4:str+black:str+10:str++
-# ++4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str++
-# ++5+/home/sky/aaaaaaaaaaaa/file.txt:str+Some data:str+rstring:str+False:bool+0:str+5b8:str++

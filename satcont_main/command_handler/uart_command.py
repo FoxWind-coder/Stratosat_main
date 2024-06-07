@@ -54,6 +54,9 @@ class UARTCommand:
             return None, None
 
         parts = command.strip("++").split('+')
+        if len(parts) < 2:
+            raise ValueError("Invalid command format")
+
         command_number = int(parts[0])
         args = parts[1:]
         parsed_args = []
