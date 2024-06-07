@@ -43,10 +43,6 @@ class UARTCommand:
         log("Added command number: {} with function: {} and release_port_during_execution: {}".format(
             command_number, function.__name__, release_port_during_execution), 'DEBUG')
 
-    def send_response(self, message):
-    log("Sending response message: {}".format(message), 'INFO')
-    self.ser.write(f"Response: {message}\n".encode())
-
     def parse_command(self, command):
         log("Parsing command: {}".format(command), 'DEBUG')
         if verbose_logging:
@@ -70,6 +66,8 @@ class UARTCommand:
                 parsed_args.append(value)
             elif type_specifier == 'int':
                 parsed_args.append(int(value))
+            elif type_specifier == 'bool':
+                parsed_args.append(value.lower() == 'true')
             else:
                 raise ValueError("Unsupported type specifier")
         log("Parsed command number: {} with arguments: {}".format(command_number, parsed_args), 'DEBUG')
@@ -89,6 +87,10 @@ class UARTCommand:
             log("Error during command execution: {}".format(e), 'ERROR')
             self.send_error(str(e))
 
+    def send_response(self, message):
+        log("Sending response message: {}".format(message), 'INFO')
+        self.ser.write(f"Response: {message}\n".encode())
+
     def send_error(self, message):
         log("Sending error message: {}".format(message), 'ERROR')
         self.ser.write(f"Error: {message}\n".encode())
@@ -104,13 +106,10 @@ class UARTCommand:
                 try:
                     char = self.ser.read().decode()
                     if char:
-                        if char == '+':
-                            if current_command and current_command[-1] == '+':
-                                self.execute_command(current_command)
-                                current_command = ""
-                                break 
-                            else:
-                                current_command += char
+                        if (char == '+') and current_command and (current_command[-1] == '+'):
+                            self.execute_command(current_command)
+                            current_command = ""
+                            break 
                         else:
                             current_command += char
                 except serial.SerialTimeoutException:

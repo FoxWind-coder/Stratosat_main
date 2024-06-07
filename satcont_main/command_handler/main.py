@@ -49,6 +49,7 @@ def pic2point(source, save):
         log(f"[EXTERNAL] Error executing converting command: {e}", 'ERROR')
 
 def manage_file(path, data, mode, operation, overwrite, hash_check, line_number=None):
+    log(data, 'DEBUG')
     # Создание пути к файлу, если он не существует
     if not os.path.exists(os.path.dirname(path)):
         os.makedirs(os.path.dirname(path))
@@ -106,8 +107,8 @@ def manage_file(path, data, mode, operation, overwrite, hash_check, line_number=
         log(log_message, 'INFO')
     return "Data written successfully"
 
-def file_command(path, data, mode, operation, overwrite, hash_check, line_number=None):
-    result = manage_file(path, data, mode, operation, overwrite, hash_check, line_number)
+def file_command(path, data, operation, overwrite, hash_check, line_number=None):
+    result = manage_file(path, data, operation, overwrite, hash_check, line_number)
     log(result, 'INFO')
     return result
 
@@ -160,4 +161,4 @@ if __name__ == "__main__":
 # python3 main.py --port 2 --baudrate 115200
 # ++3+/home/sky/capture:str+640:str+320:str+4:str+black:str+10:str++
 # ++4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str++
-# ++5+/path/to/file.txt:str+Some data:str+nstring:str+False:bool+abc:str++
+# ++5+/home/sky/aaaaaaaaaaaa/file.txt:str+Some data:str+rstring:str+False:bool+0:str+5b8:str++
