@@ -5,7 +5,7 @@ import serial
 import os
 import json
 import subprocess
-
+import hashlib
 
 def test1(arg1, arg2, arg3):
     log(f"parsed arguments: {arg1} {arg2} {arg3}", 'INFO')
@@ -48,7 +48,68 @@ def pic2point(source, save):
     except Exception as e:
         log(f"[EXTERNAL] Error executing converting command: {e}", 'ERROR')
 
+def manage_file(path, data, mode, operation, overwrite, hash_check, line_number=None):
+    # Создание пути к файлу, если он не существует
+    if not os.path.exists(os.path.dirname(path)):
+        os.makedirs(os.path.dirname(path))
+    
+    # Проверка существования файла
+    if not os.path.isfile(path):
+        with open(path, 'w') as f:
+            pass
 
+    # Проверка хеша строки
+    data_hash = hashlib.md5(data.encode()).hexdigest()[:3]
+    if data_hash != hash_check:
+        log("Hash mismatch: expected {}, got {}".format(hash_check, data_hash), 'WARNING')
+        return "Warning: Hash mismatch"
+
+    # Чтение текущего содержимого файла
+    with open(path, 'r') as file:
+        lines = file.readlines()
+
+    # Выполнение операций над содержимым файла
+    if operation == 'nstring':
+        if overwrite:
+            with open(path, 'w') as file:
+                file.write(data + '\n')
+        else:
+            with open(path, 'a') as file:
+                file.write(data + '\n')
+    elif operation == 'sstring':
+        if line_number is not None:
+            line_number = int(line_number) - 1
+            if line_number < len(lines):
+                lines[line_number] = lines[line_number].strip() + data + '\n'
+            else:
+                lines.append(data + '\n')
+        else:
+            lines.append(data + '\n')
+        
+        with open(path, 'w') as file:
+            file.writelines(lines)
+    elif operation == 'rstring':
+        if line_number is not None:
+            line_number = int(line_number) - 1
+            if line_number < len(lines):
+                lines[line_number] = data + '\n'
+            else:
+                lines.append(data + '\n')
+        
+        with open(path, 'w') as file:
+            file.writelines(lines)
+    
+    log_message = f"Data written to {path} with operation {operation}"
+    if verbose_logging:
+        log(log_message, 'DEBUG')
+    else:
+        log(log_message, 'INFO')
+    return "Data written successfully"
+
+def file_command(path, data, mode, operation, overwrite, hash_check, line_number=None):
+    result = manage_file(path, data, mode, operation, overwrite, hash_check, line_number)
+    log(result, 'INFO')
+    return result
 
 if __name__ == "__main__":
     # arg parser
@@ -87,13 +148,16 @@ if __name__ == "__main__":
     uart.add_command(2, test2, release_port_during_execution=False)
     uart.add_command(3, execute_capture_command, release_port_during_execution=False)
     uart.add_command(4, pic2point, release_port_during_execution=False)
-    
+    uart.add_command(5, file_command, release_port_during_execution=False)
+
     # parallel uart listening
     listener_thread = threading.Thread(target=uart.listen)
     listener_thread.start()
     
     log("UART listener started.", 'INFO')
 
+# Example usage:
 # python3 main.py --port 2 --baudrate 115200
 # ++3+/home/sky/capture:str+640:str+320:str+4:str+black:str+10:str++
 # ++4+/home/sky/capture/capture_3.jpg:str+/home/sky/capture/pointed:str++
+# ++5+/path/to/file.txt:str+Some data:str+nstring:str+False:bool+abc:str++

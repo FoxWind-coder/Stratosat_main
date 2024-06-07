@@ -43,6 +43,10 @@ class UARTCommand:
         log("Added command number: {} with function: {} and release_port_during_execution: {}".format(
             command_number, function.__name__, release_port_during_execution), 'DEBUG')
 
+    def send_response(self, message):
+    log("Sending response message: {}".format(message), 'INFO')
+    self.ser.write(f"Response: {message}\n".encode())
+
     def parse_command(self, command):
         log("Parsing command: {}".format(command), 'DEBUG')
         if verbose_logging:
@@ -76,8 +80,9 @@ class UARTCommand:
             log("Executing command: {}".format(command), 'DEBUG')
             command_number, args = self.parse_command(command)
             if command_number in self.commands:
-                self.commands[command_number]["function"](*args)
+                result = self.commands[command_number]["function"](*args)
                 log("Command executed successfully: {}".format(command_number), 'INFO')
+                self.send_response(result)
             else:
                 self.send_error("Unknown command")
         except Exception as e:
