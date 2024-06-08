@@ -55,25 +55,35 @@ def pic2point(source, save):
     except Exception as e:
         log(f"[EXTERNAL] Error executing converting command: {e}", 'ERROR')
         return str(e)
-# ++5+/home/sky/aaaaaaaaaaaa/file.txt:str+Some data:str+a:str+nstring:str+False:bool+5b8:str+0:int++
-def manage_file(path, data, mode, operation, overwrite, hash_check, line_number=None):
+
+def manage_file(path, data, mode, hash_check, line_number=0):
     log(f"Managing file: {path}", 'INFO')
+
     # Создание пути к файлу, если он не существует
     if not os.path.exists(os.path.dirname(path)):
         os.makedirs(os.path.dirname(path))
         log(f"Created directory for path: {path}", 'INFO')
-    
-    # Проверка существования файла
-    if not os.path.exists(path):
-        with open(path, 'w') as f:
-            pass
-        log(f"Created empty file: {path}", 'INFO')
 
     # Проверка хеша строки
     data_hash = hashlib.md5(data.encode()).hexdigest()[:3]
     if data_hash != hash_check:
         log(f"Hash mismatch for data: {data}", 'WARNING')
         return "Hash mismatch warning"
+
+    # Удаление файла, если mode == 'remove'
+    if mode == 'remove':
+        if os.path.exists(path):
+            os.remove(path)
+            log(f"Removed file: {path}", 'INFO')
+        else:
+            log(f"File does not exist: {path}", 'WARNING')
+        return "File removed"
+
+    # Проверка существования файла
+    if not os.path.exists(path):
+        with open(path, 'w') as f:
+            pass
+        log(f"Created empty file: {path}", 'INFO')
 
     # Чтение текущего содержимого файла
     with open(path, 'r') as f:
@@ -82,45 +92,55 @@ def manage_file(path, data, mode, operation, overwrite, hash_check, line_number=
     log(f"Read {len(lines)} lines from file: {path}", 'INFO')
 
     # Выполнение операций над содержимым файла
-    if operation == 'nstring':
-        if overwrite:
-            mode = 'w'
+    if mode == 'nstring':
+        if line_number == 0:
+            lines.append(data + '\n')
+        elif line_number == -1:
+            lines.insert(0, data + '\n')
+        elif 1 <= line_number <= len(lines):
+            lines.insert(line_number, data + '\n')
         else:
-            mode = 'a'
-        with open(path, mode) as f:
-            f.write(data + '\n')
+            lines.append(data + '\n')
         log(f"Added new string to file: {path}", 'INFO')
 
-    elif operation == 'sstring':
-        if line_number is not None and line_number <= len(lines):
+    elif mode == 'sstring':
+        if line_number == 0:
+            if lines:
+                lines[-1] = lines[-1].rstrip('\n') + data + '\n'
+            else:
+                lines.append(data + '\n')
+        elif line_number == -1:
+            if lines:
+                lines[0] = lines[0].rstrip('\n') + data + '\n'
+            else:
+                lines.append(data + '\n')
+        elif 1 <= line_number <= len(lines):
             lines[line_number - 1] = lines[line_number - 1].rstrip('\n') + data + '\n'
         else:
             lines.append(data + '\n')
-        with open(path, 'w') as f:
-            f.writelines(lines)
         log(f"Appended data to line {line_number} in file: {path}", 'INFO')
 
-    elif operation == 'rstring':
-        if line_number is not None and line_number <= len(lines):
+    elif mode == 'rstring':
+        if 1 <= line_number <= len(lines):
             lines[line_number - 1] = data + '\n'
         else:
             lines.append(data + '\n')
-        with open(path, 'w') as f:
-            f.writelines(lines)
         log(f"Replaced data in line {line_number} in file: {path}", 'INFO')
-    
+
+    elif mode == 'replace':
+        lines = [data + '\n']
+        log(f"Replaced all content in file: {path}", 'INFO')
+
     else:
-        log(f"Unsupported operation: {operation}", 'ERROR')
-        return "Unsupported operation"
+        log(f"Unsupported mode: {mode}", 'ERROR')
+        return "Unsupported mode"
 
-    log(f"Operation {operation} performed on file {path}", 'INFO')
+    # Запись изменений в файл
+    with open(path, 'w') as f:
+        f.writelines(lines)
+
+    log(f"Operation {mode} performed on file {path}", 'INFO')
     return "success"
-
-
-
-
-
-
 
 if __name__ == "__main__":
     # arg parser
@@ -154,6 +174,7 @@ if __name__ == "__main__":
     # ++1+FoxWind:str+1234:int+example:str++
     # You can change the verbose logging value to True inside uart_command.py if you need to debug the code.
     # Note: that the error log processing and output for parsing and command processing are provided, although they are not perfect.
+    # ++5+/home/sky/test123.txt:str+12345ahahahaha:str+remove:str+d21:str+3:int++
 
     uart.add_command(1, test1, release_port_during_execution=True)
     uart.add_command(2, test2, release_port_during_execution=False)
