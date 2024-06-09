@@ -107,7 +107,7 @@ class UARTCommand:
             timeout_occurred = False
             while time.time() - command_start_time < command_timeout:
                 try:
-                    char = self.ser.read().decode('utf-8', errors='ignore')  # Игнорирование недекодируемых байтов
+                    char = self.ser.read().decode('utf-8', errors='ignore')  # ignore undecodable bytes
                     if char:
                         if (char == '+') and current_command and (current_command[-1] == '+'):
                             self.execute_command(current_command)
